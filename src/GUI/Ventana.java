@@ -5,6 +5,7 @@
  */
 package GUI;
 
+
 import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
@@ -15,9 +16,9 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author User
+ * @author LN710Q
  */
-public class Ventana extends JPanel{
+public class Ventana extends JPanel {
     public int WIDTH =445,widthTF=120, widthB =100;
     public int HEIGHT = 300, heightTF = 30, heightB= 30;
     public JTextField textF1, textF2, textF3;
@@ -33,34 +34,26 @@ public class Ventana extends JPanel{
         textF3 = new JTextField();
         textF3.setBounds(new Rectangle(150,230,widthTF,heightTF));
         
-        sum = new JButton("Suma");
+        sum = new JButton("+");
         sum.setBounds(new Rectangle(20,115,widthB,heightB));
         
-        res = new JButton("Resta");
+        res = new JButton("-");
         res.setBounds(new Rectangle(120,115,widthB,heightB));
         
-        mult = new JButton("Multiplicación");
+        mult = new JButton("*");
         mult.setBounds(new Rectangle(220,115,widthB,heightB));
         
-        div = new JButton("División");
+        div = new JButton("/");
         div.setBounds(new Rectangle(320,115,widthB,heightB));
         
         bin = new JButton("Binario");
         bin.setBounds(new Rectangle(20,150,widthB,heightB));
         
-        dec = new JButton("Decimal");
-        dec.setBounds(new Rectangle(120,150,widthB,heightB));
-        
-        oct = new JButton("Octal");
-        oct.setBounds(new Rectangle(220,150,widthB,heightB));
-        
-        hex = new JButton("Hexadecimal");
-        hex.setBounds(new Rectangle(320,150,widthB,heightB));
         
         textF1.setEditable(true);
         textF2.setEditable(true);
         textF3.setEditable(false);
-    
+        
         sum.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent arg0){
@@ -96,26 +89,6 @@ public class Ventana extends JPanel{
             }
         });
         
-        dec.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent arg0){
-                
-            }
-        });
-        
-        oct.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent arg0){
-               
-            }
-        });
-        
-        hex.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent arg0){
-                
-            }
-        });
         
         add(textF1);
         add(textF2);
@@ -125,12 +98,7 @@ public class Ventana extends JPanel{
         add(mult);
         add(div);
         add(bin);
-        add(dec);
-        add(oct);
-        add(hex);
         setLayout(null);
         setPreferredSize(new Dimension(WIDTH,HEIGHT));
-        
+    }
 }
-}
-
